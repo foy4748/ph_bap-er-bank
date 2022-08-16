@@ -22,6 +22,12 @@ DepositButton.addEventListener("click", function () {
 	DepositField.value = "";
 	WithdrawField.value = "";
 
+	//Checking Input Validiy
+	if (!depositAmount || depositAmount < 0) {
+		alert("Requires Deposit Amount > 0");
+		return;
+	}
+
 	Deposit.innerText = depositAmount + currentDeposit;
 	Balance.innerText = depositAmount + currentBalance;
 
@@ -36,6 +42,14 @@ WithdawButton.addEventListener("click", function () {
 	DepositField.value = "";
 	WithdrawField.value = "";
 
+	//Checking Input Validiy
+	if (!withdrawAmount || withdrawAmount < 0) {
+		alert("Requires Withdraw Amount > 0");
+		return;
+	}
+
+	//Checking if withdrawAmount 
+	//exceeds currentBalance 
 	const isExceeded = withdrawAmount > currentBalance;
 	if (isExceeded) {
 		alert("Balance is insufficuent");

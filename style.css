@@ -106,3 +106,25 @@ button{
     align-items:center;
 
 }
+
+/* MEDIA QUERIES */
+
+/*-------- Tablet View ----------*/
+@media screen and (min-width: 768px){
+
+/* Configuring Grid System */
+/*     For Tablet view     */
+
+.amounts > *:first-child{
+    grid-column: 1 / 5;
+}
+
+.amounts > *:nth-child(2){
+    grid-column: 5 / 9;
+}
+
+.amounts > *:last-child{
+    grid-column: 9 / -1;
+}
+
+}
