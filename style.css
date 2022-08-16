@@ -1,9 +1,9 @@
 /* IMPORT Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
 :root{
---bg-dark: #839AA8;
+--bg-dark: #242F9B;
 --bg-main: #646FD4;
---color-main: #D3EBCD;
+--color-main: #DBDFFD;
 }
 
 body{
@@ -12,15 +12,32 @@ body{
     color: var(--color-main);
     font-family:'Poppins','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-h1{
+h1, p{
+    margin: 0.5rem 0;
+}
+
+header > h1{
     text-align: center;
     background-color: var(--bg-dark);
     margin:0;
 }
 
+div{
+    background-color:var(--bg-main);
+}
 
 input{
     display: block;
+}
+
+button{
+    background-color: var(--bg-dark);
+    color: var(--color-main);
+    border: 0;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
+
 }
 
 .login-form{
@@ -37,4 +54,55 @@ input{
 
 #login-button{
     width: 10em;
+}
+
+/* Account Page Style Rules */
+.amounts{
+    display:grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-gap: 0.5rem;
+    margin: 1rem 1rem 1rem; 
+
+}
+
+.amounts > div{
+    border-radius: 1rem;
+    padding: 1rem;
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+/* Configuring Grid System */
+
+.amounts > *:first-child{
+    grid-column: 1 / 7;
+}
+
+.amounts > *:nth-child(2){
+    grid-column: 7 / -1;
+}
+
+.amounts > *:last-child{
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+}
+
+.exchange{
+    display:grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-gap: 1rem;
+    margin: 1rem 1rem 1rem; 
+}
+
+.exchange > div{
+    grid-column: 1 / -1;
+    border-radius: 1rem;
+    padding: 1rem;
+
+    display:flex;
+    flex-flow:column wrap;
+    align-items:center;
+
 }
