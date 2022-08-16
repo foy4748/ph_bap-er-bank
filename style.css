@@ -1,0 +1,40 @@
+/* IMPORT Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+:root{
+--bg-dark: #839AA8;
+--bg-main: #646FD4;
+--color-main: #D3EBCD;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    color: var(--color-main);
+    font-family:'Poppins','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1{
+    text-align: center;
+    background-color: var(--bg-dark);
+    margin:0;
+}
+
+
+input{
+    display: block;
+}
+
+.login-form{
+
+    display:flex;
+    flex-flow:column wrap;
+
+    align-items:center;
+
+    padding: 3rem;
+
+    background-color: var(--bg-main);
+}
+
+#login-button{
+    width: 10em;
+}
