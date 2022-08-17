@@ -1,5 +1,33 @@
 //---------- Account ----------  
 
+
+//Function
+//to grab Element Value 
+function getElementValue(elementId) {
+	const elementValue = document.getElementById(elementId);
+	const floatConverted = parseFloat(elementValue);
+	if (!floatConverted || floatConverted < 0) {
+		alert("Requires Amount > 0");
+		return 0;
+	}
+	return floatConverted;
+
+
+}
+
+//Function
+//to grab Input Field Value 
+function getInputValue(inputFieldId) {
+	const inputValue = document.getElementById(inputFieldId);
+	const floatConverted = parseFloat(inputValue);
+	if (!floatConverted || floatConverted < 0) {
+		alert("Requires Amount > 0");
+		return 0;
+	}
+	return floatConverted;
+
+
+}
 //Money Amounts
 const Deposit = document.getElementById("Deposit");
 const Withdraw = document.getElementById("Withdraw");
@@ -14,6 +42,8 @@ const DepositButton = document.getElementById("DepositButton");
 const WithdawButton = document.getElementById("WithdrawButton");
 
 //Event Listeners
+
+//For DEPOSITE BUTTON
 DepositButton.addEventListener("click", function () {
 	const currentDeposit = parseFloat(Deposit.innerText);
 	const currentBalance = parseFloat(Balance.innerText);
@@ -34,6 +64,7 @@ DepositButton.addEventListener("click", function () {
 });
 
 
+//For WITHDRAW BUTTON
 WithdawButton.addEventListener("click", function () {
 	const currentWithdraw = parseFloat(Withdraw.innerText);
 	const withdrawAmount = parseFloat(WithdrawField.value);
