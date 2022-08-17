@@ -77,7 +77,7 @@ button:focus{
     display:grid;
     grid-template-columns: repeat(12,1fr);
     grid-gap: 0.5rem;
-    margin: 1rem 1rem 1rem; 
+    margin: 1rem; 
 
 }
 
@@ -92,15 +92,11 @@ button:focus{
 
 /* Configuring Grid System */
 
-.amounts > *:first-child{
-    grid-column: 1 / 7;
+.amounts > div{
+    grid-column: auto / span 6;
 }
 
-.amounts > *:nth-child(2){
-    grid-column: 7 / -1;
-}
-
-.amounts > *:last-child{
+.amounts > div:last-child{
     grid-column: 1 / -1;
     grid-row: 1 / 2;
 }
@@ -109,7 +105,7 @@ button:focus{
     display:grid;
     grid-template-columns: repeat(12,1fr);
     grid-gap: 1rem;
-    margin: 1rem 1rem 1rem; 
+    margin: 1rem; 
 }
 
 .exchange > div{
@@ -131,16 +127,17 @@ button:focus{
 /* Configuring Grid System */
 /*     For Tablet view     */
 
-.amounts > *:first-child{
-    grid-column: 1 / 5;
-}
 
-.amounts > *:nth-child(2){
-    grid-column: 5 / 9;
-}
+    .amounts > div{
+	grid-column: auto / span 4;
+    }
 
-.amounts > *:last-child{
-    grid-column: 9 / -1;
-}
+    .amounts > div:last-child{
+	grid-column: 9 / -1;
+    }
+
+    .exchange > div{
+	grid-column: auto/ span 6;
+    }
 
 }
